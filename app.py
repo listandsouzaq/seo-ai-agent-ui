@@ -125,6 +125,12 @@ if submitted:
             action = "**Action:** Check your robots.txt file, ensure the page is not set to 'noindex', submit your sitemap to Google Search Console, and verify there are no crawl errors."
             priority_class = "technical-seo"
         
+        elif pagespeed < 50:
+            priority = "Technical SEO"
+            reason = f"Your PageSpeed score is {pagespeed}/100, which is below the acceptable threshold."
+            action = "**Action:** Optimize images, minify CSS/JavaScript, enable caching, use a CDN, and consider upgrading your hosting. Fast loading speeds are crucial for both user experience and SEO."
+            priority_class = "technical-seo"
+        
         elif content_length < 800:
             priority = "Content Priority"
             reason = f"Your content is only {content_length} words, which is below the recommended minimum of 800 words."
@@ -141,12 +147,6 @@ if submitted:
             reason = f"Your page is missing {' and '.join(missing)}, which are essential for search engine optimization."
             action = "**Action:** Add a compelling title tag (50-60 characters) and meta description (150-160 characters) that includes your target keywords and encourages clicks."
             priority_class = "onpage-seo"
-        
-        elif pagespeed < 50:
-            priority = "Technical SEO"
-            reason = f"Your PageSpeed score is {pagespeed}/100, which is below the acceptable threshold."
-            action = "**Action:** Optimize images, minify CSS/JavaScript, enable caching, use a CDN, and consider upgrading your hosting. Fast loading speeds are crucial for both user experience and SEO."
-            priority_class = "technical-seo"
         
         else:
             priority = "Off-Page SEO"

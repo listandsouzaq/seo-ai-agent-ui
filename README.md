@@ -13,7 +13,7 @@ A professional web UI for an AI-powered SEO priority analysis agent that helps u
 
 The tool analyzes your page based on multiple factors and provides prioritized recommendations:
 
-1. **Technical SEO** - If page is not indexed or PageSpeed score < 50
+1. **Technical SEO** (Highest Priority) - If page is not indexed OR PageSpeed score < 50
 2. **Content Priority** - If content length < 800 words
 3. **On-Page SEO** - If missing title tag or meta description
 4. **Off-Page SEO** - If all above are satisfied, focus on building authority
